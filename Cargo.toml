@@ -1,0 +1,23 @@
+[package]
+authors = ["Robert Collins <robert.collins@cognite.com>"]
+categories = ["web-programming::http-server", "web-programming"]
+description = "Variant support in web forms for rocket"
+edition = "2018"
+homepage = "https://github.com/cognitedata/rocket-enumform/"
+keywords = ["rocket"]
+license = "MIT OR Apache-2.0"
+name = "rocket-enumform"
+readme = "README.md"
+repository = "https://github.com/cognitedata/rocket-enumform/"
+version = "0.1.0"
+
+[badges]
+[badges.maintenance]
+status = "as-is"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.5.0-rc.1"
+serde = "1.0.130"
+serde_urlencoded = "0.7.0"
