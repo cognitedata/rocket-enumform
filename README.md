@@ -30,7 +30,9 @@ fn body(data: UrlEncoded<Body>) -> String { /*...*/ }
 
 ## status
 
-Works but not unit tested, nor have local testing affordances been added yet.
+Works but not unit tested, nor have local testing affordances for users been added yet.
+
+Supports rust stable and nightly, matching Rocket.
 
 ## Code of conduct
 
