@@ -58,7 +58,7 @@ use rocket::form::prelude as form;
 use rocket::http::uri::fmt::{Formatter as UriFormatter, FromUriParam, Query, UriDisplay};
 use rocket::http::{ContentType, Status};
 use rocket::request::{local_cache, Request};
-use rocket::response::{self, content, Responder};
+use rocket::response::{self, Responder};
 use serde::{Deserialize, Serialize};
 
 /// The UrlEncoded guard: easily consume x-www-form-urlencoded requests.
@@ -207,7 +207,7 @@ impl<'r, T: Serialize> Responder<'r, 'static> for UrlEncoded<T> {
             Status::InternalServerError
         })?;
 
-        content::Custom(ContentType::Form, string).respond_to(req)
+        (ContentType::Form, string).respond_to(req)
     }
 }
 
